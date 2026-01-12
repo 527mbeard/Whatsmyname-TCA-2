@@ -1,102 +1,144 @@
-function getPrefix{
-  if (movie === 'The Grey Man') {
-  prefix="Agent";
-} else if(movie === 'The Beekeeper') {
-  prefix="Sergeant";
-} else if(movie === 'Fast and Furious:Hobbs and Shaw') {
-  prefix="Captain";
-} else if(movie === 'The Gorge') {
-  prefix="Officer";
-} else if(movie === 'The Running Man') {
-  prefix="General";
-} else if(movie === 'The Amateur') {
-  prefix="Private";
-} else if(movie === 'Heads of State') {
-  prefix="Commander";
-} else if(movie === 'Ghosted') {
-  prefix="Major";
-} 
-return prefix
-} 
+onclick: "GenerateName()"
 
-function getFirstName(){
+function GenerateFunction() {
+
+  getPrefix()
+  getFirstName()
+  getMiddlename()
+  getLastname()
+  getSuffix()
+
+
+  NewName = `${prefix} + ${first} + ${middle} + ${last} + ${suffix}`
+
+};
+
+
+function getPrefix() {
+  if (document.getElementById('1)').value === 'True') {
+    prefix = "Agent";
+  } else if (document.getElementById('2)').value === 'True') {
+    prefix = "Sergeant";
+  } else if (document.getElementById('3)').value === 'True') {
+    prefix = "Captain";
+  } else if (document.getElementById('4)').value === 'True') {
+    prefix = "Officer";
+  } else if (document.getElementById('5)').value === 'True') {
+    prefix = "General";
+  } else if (document.getElementById('6)').value === 'True') {
+    prefix = "Private";
+  } else if (document.getElementById('7)').value === 'True') {
+    prefix = "Commander";
+  } else if (document.getElementById('8)').value === 'True') {
+    prefix = "Major";
+  }
+  return;
+}
+function getFirstName() {
   if (letter === 'a-e') {
-  name="Archer";
-} else if(letter === 'f-i') {
-  name="falcon";
-} else if(letter === 'j-n') {
-  prefix="jones";
-} else if(letter === 'o-r') {
-  prefix="orlando";
-} else if(letter === 's-z') {
-  prefix="sky";
-} 
-return firstletter
-} 
- 
-    
-function getMiddlename(){
-  switch (color ) {
-    case 'red': middleName('crazy'); break;
-    case 'orange': middleName('sneaky'); break;
-    case 'yellow': middleName('fast'); break;
-    case 'green': middleName('quiet'); break;
-    case 'blue': middleName('dark'); break;
-    case 'purple': middleName('mysterious'); break;
-    case 'pink': middleName('hidden'); break;
-    case 'black': middleName('secret'); break;
-    case 'brown': middleName('sinister'); break;
-}}
- return middle;
+    first = "Archer";
+  } else if (letter === 'f-i') {
+    first = "falcon";
+  } else if (letter === 'j-n') {
+    first = "jones";
+  } else if (letter === 'o-r') {
+    first = "orlando";
+  } else if (letter === 's-z') {
+    first = "sky";
+  }
+  return;
+}
 
- function getLastname(){
+
+function getMiddlename() {
+  switch (color) {
+    case 'red': middleName = 'crazy'; break;
+    case 'orange': middleName = 'sneaky'; break;
+    case 'yellow': middleName = 'fast'; break;
+    case 'green': middleName = 'quiet'; break;
+    case 'blue': middleName = 'dark'; break;
+    case 'purple': middleName = 'mysterious'; break;
+    case 'pink': middleName = 'hidden'; break;
+    case 'black': middleName = 'secret'; break;
+    case 'brown': middleName = 'sinister'; break;
+  }
+}
+return;
+
+function getPoints(value){
+    switch(value){
+        case 'glen':
+            return 1;
+        case 'miles':
+            return 1;
+        case 'anya':
+            return 1;
+        case 'jason':
+            return 1;
+        case 'john':
+            return 1;
+        case 'chris':
+            return 1;
+        case 'ryan':
+            return 1;
+        case 'idris':
+            return 1;
+        case 'ana':
+            return 1;
+        default:
+            return 0;
+    }
+}
+
+function getLastname() {
   if (actor === 'Glen Powell') {
-  name="Pheonix";
-} else if(actor === 'Miles Teller') {
-  name="Shadow";
-} else if(actor === 'Anya Taylor Joy') {
-  prefix="Powers";
-} else if(actor === 'Jason Statham') {
-  prefix="Hunter";
-} else if(actor === 'John Cena') {
-  prefix="Scorpian";
-} else if(actor === 'Chris Evans') {
-  prefix="Star";
-} else if(actor === 'Ryan Gosling') {
-  prefix="Metal";
-} else if(actor === 'Idris Elba') {
-  prefix="Echo";
-} else if(actor === 'Ana De Amras') {
-  prefix="Night";
-} 
-return Middlename
-} 
- 
-function getSuffix(){
+    last = "Pheonix";
+  } else if (actor === 'Miles Teller') {
+    last = "Shadow";
+  } else if (actor === 'Anya Taylor Joy') {
+    last = "Powers";
+  } else if (actor === 'Jason Statham') {
+    last = "Hunter";
+  } else if (actor === 'John Cena') {
+    last = "Scorpian";
+  } else if (actor === 'Chris Evans') {
+    last = "Star";
+  } else if (actor === 'Ryan Gosling') {
+    last = "Metal";
+  } else if (actor === 'Idris Elba') {
+    last = "Echo";
+  } else if (actor === 'Ana De Amras') {
+    last = "Night";
+  }
+  return;
+}
+
+function getSuffix() {
   if (birth === 'January') {
-  name="Jr.";
-} else if(birth === 'February') {
-  name="Sr.";
-}else if(birth === 'March') {
-  name="PhD";
-}else if(birth === 'April') {
-  name="MD";
-}else if(birth === 'May') {
-  name="Jr.";
-}else if(birth === 'June') {
-  name="Sr.";
-}else if(birth === 'July') {
-  name="PhD";
-}else if(birth === 'August') {
-  name="MD";
-}else if(birth === 'September') {
-  name="Jr.";
-}else if(birth === 'October') {
-  name="Sr.";
-}else if(birth === 'November') {
-  name="PhD";
-}else if(birth === 'December') {
-  name="MD";
+    suffix = "Jr.";
+  } else if (birth === 'February') {
+    suffix = "Sr.";
+  } else if (birth === 'March') {
+    suffix = "PhD";
+  } else if (birth === 'April') {
+    suffix = "MD";
+  } else if (birth === 'May') {
+    suffix = "Jr.";
+  } else if (birth === 'June') {
+    suffix = "Sr.";
+  } else if (birth === 'July') {
+    suffix = "PhD";
+  } else if (birth === 'August') {
+    suffix = "MD";
+  } else if (birth === 'September') {
+    suffix = "Jr.";
+  } else if (birth === 'October') {
+    suffix = "Sr.";
+  } else if (birth === 'November') {
+    suffix = "PhD";
+  } else if (birth === 'December') {
+    suffix = "MD";
+  }
+  return;
 }
-  return birthday
-}
+
