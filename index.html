@@ -24,60 +24,59 @@
                     <div class="card backer">
                         <img class="card-img-top" src="holidaybanner.png" alt="Title" />
                         <div class="card-body">
-                            <h4 class="card-title">Are you naughty or nice?</h4>
-                            <p class="card-text">Yes adds 1 point. No takes away one point.</p>
+                            <h4 class="card-title">What's your spy name?</h4><br>
                             <div class="mb-3">
                                 <label for="q1" class="form-label fw-semibold">What is your favorite action
                                     movie? (Check off one)</label>
                                 <form action="/action_page.php">
-                                    <input type="checkbox" id="GreyManCheckBox" name="grey" value="true">
-                                    <label for="vehicle1"> The Grey Man</label><br>
-                                    <input type="checkbox" id="2" name="bee" value="Car">
-                                    <label for="vehicle2"> The Beekeeper</label><br>
-                                    <input type="checkbox" id="3" name="fast" value="Boat">
-                                    <label for="vehicle3"> Fast and Furious: Hobbs and Shaw</label><br>
-                                    <input type="checkbox" id="4" name="gorge" value="Boat">
-                                    <label for="vehicle3"> The Gorge</label><br>
-                                    <input type="checkbox" id="5" name="running" value="Boat">
-                                    <label for="vehicle3"> The Running Man</label><br>
-                                    <input type="checkbox" id="6" name="amateur" value="Boat">
-                                    <label for="vehicle3"> The Amateur</label><br>
-                                    <input type="checkbox" id="7" name="state" value="Boat">
-                                    <label for="vehicle3"> Heads of State</label><br>
-                                    <input type="checkbox" id="8" name="ghosted" value="Boat">
-                                    <label for="vehicle3"> Ghosted</label><br>
+                                    <input type="checkbox" id="1" name="grey" value="true">
+                                    <label for="grey"> The Grey Man</label><br>
+                                    <input type="checkbox" id="2" name="bee" value="true">
+                                    <label for="bee"> The Beekeeper</label><br>
+                                    <input type="checkbox" id="3" name="fast" value="true">
+                                    <label for="fast"> Fast and Furious: Hobbs and Shaw</label><br>
+                                    <input type="checkbox" id="4" name="gorge" value="true">
+                                    <label for="gorge"> The Gorge</label><br>
+                                    <input type="checkbox" id="5" name="running" value="true">
+                                    <label for="running"> The Running Man</label><br>
+                                    <input type="checkbox" id="6" name="amateur" value="true">
+                                    <label for="amateur"> The Amateur</label><br>
+                                    <input type="checkbox" id="7" name="state" value="true">
+                                    <label for="state"> Heads of State</label><br>
+                                    <input type="checkbox" id="8" name="ghost" value="true">
+                                    <label for="ghost"> Ghosted</label><br>
                                 </form>
                             </div>
                             <div class="mb-3">
                                 <label for="q2" class="form-label fw-semibold">What is the first letter of your
                                     name?</label>
-                                    <br><input type="radio" id="myRadio">A-E <br>
-                                    <input type="radio" id="myRadio">F-I<br>
-                                    <input type="radio" id="myRadio">J-N<br>
-                                    <input type="radio" id="myRadio">O-R<br>
-                                    <input type="radio" id="myRadio">S-Z
-
+                                    <br>
+                                    <input type="radio" id="9">A-E <br>
+                                    <input type="radio" id="10">F-I<br>
+                                    <input type="radio" id="11">J-N<br>
+                                    <input type="radio" id="12">O-R<br>
+                                    <input type="radio" id="13">S-Z
                             </div>
                             <div class="mb-3">
                                 <label for="q3" class="form-label fw-semibold">What is your favorite color?</label>
-                                    <form action="/action_page.php">
+                                    <form action="  ">
                                         <label for="color"></label>
-                                        <input type="text" id="color" name="color1">
+                                        <input type="text" id="middleName" name="color1">
                             </div>
                             <div class="mb-3">
-                                <label for="q4" class="form-label fw-semibold">Who is your favorite action movie
+                                <label for="favoriteActor" class="form-label fw-semibold">Who is your favorite action movie
                                     actor?</label>
-                                <select id="q4" class="form-select">
+                                <select id="lastName" class="form-select">
                                     <option value="Choose">Choose</option>
-                                    <option value="glen">Glen Powell</option>
-                                    <option value="miles">Miles Teller</option>
-                                    <option value="anya">Anya Taylor Joy</option>
-                                    <option value="jason">Jason Statham</option>
-                                    <option value="john">John Cena</option>
-                                    <option value="chris">Chris Evans</option>
-                                    <option value="ryan">Ryan Gosling</option>
-                                    <option value="idris">Idris Elba</option>
-                                    <option value="ana">Ana De Amras</option>
+                                    <option value="glen" id="14">Glen Powell</option>
+                                    <option value="miles" id="15">Miles Teller</option>
+                                    <option value="anya" id="16">Anya Taylor Joy</option>
+                                    <option value="jason" id="17">Jason Statham</option>
+                                    <option value="john" id="18">John Cena</option>
+                                    <option value="chris" id="19">Chris Evans</option>
+                                    <option value="ryan" id="20">Ryan Gosling</option>
+                                    <option value="idris" id="21">Idris Elba</option>
+                                    <option value="ana" id="22">Ana De Amras</option>
                                 </select>
                             </div>
                             <div class="mb-3">
@@ -85,11 +84,12 @@
                                 <form action="/action_page.php">
                                     <label for="birthday">Birthday:</label>
                                     <input type="date" id="birthday" name="birthday">
+                                    
                                 </form>
                             </div>
 
-                            <button class="btn btn-lg" onclick="checkNaughtyOrNice()">Check My
-                                Status</button>
+                            <button class="btn btn-lg" onclick="generateName()">Generate Name</button>
+                            <div id="result"></div>
                         </div>
                     </div>
                 </div>
