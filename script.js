@@ -21,27 +21,27 @@ console.log(selectedDateString);
 
 
 function getPrefix() {
-  if (document.getElementById('1').value === 'True') {return  "Agent";} 
-  else if (document.getElementById('2').value === 'True') {return  "Sergeant";} 
-  else if (document.getElementById('3').value === 'True') {return  "Captain";} 
-  else if (document.getElementById('4').value === 'True') {return  "Officer";} 
-  else if (document.getElementById('5').value === 'True') {return  "General";} 
-  else if (document.getElementById('6').value === 'True') {return  "Private";} 
-  else if (document.getElementById('7').value === 'True') {return  "Commander";} 
-  else if (document.getElementById('8').value === 'True') {return  "Major";}
+  if (document.getElementById('one').value === 'true') {return  "Agent";} 
+  else if (document.getElementById('two').value === 'true') {return  "Sergeant";} 
+  else if (document.getElementById('three').value === 'true') {return  "Captain";} 
+  else if (document.getElementById('four').value === 'true') {return  "Officer";} 
+  else if (document.getElementById('five').value === 'true') {return  "General";} 
+  else if (document.getElementById('six').value === 'true') {return  "Private";} 
+  else if (document.getElementById('seven').value === 'true') {return  "Commander";} 
+  else if (document.getElementById('eight').value === 'true') {return  "Major";}
  
 }
 function getFirstName() {
-  if (document.getElementById('9').value === 'True'){ return  "Archer";} 
-  else if (document.getElementById('10').value === 'True') {return  "falcon";} 
-  else if (document.getElementById('11').value === 'True') {return  "jones";} 
-  else if (document.getElementById('12').value === 'True') {return  "orlando";} 
-  else if (document.getElementById('13').value === 'True') {return  "sky";}
+  if (document.getElementById('nine').value === 'true'){ return  "Archer";} 
+  else if (document.getElementById('ten').value === 'true') {return  "falcon";} 
+  else if (document.getElementById('eleven').value === 'true') {return  "jones";} 
+  else if (document.getElementById('twelve').value === 'true') {return  "orlando";} 
+  else if (document.getElementById('thirteen').value === 'true') {return  "sky";}
  
 }
 
 
-function getMiddlename() {
+function getmiddleName() {
    let color = document.getElementById("middleName").value.toLowerCase     
   switch (color) {
     case 'red': middleName = 'crazy'; break;
@@ -83,15 +83,15 @@ function getMiddlename() {
 // }
 
 function getLastname() {
-  if (document.getElementById('14').value === 'True') {return  "Pheonix";} 
-  else if (document.getElementById('15').value === 'True') {return  "Shadow";} 
-  else if (document.getElementById('16').value === 'True') {return  "Powers";} 
-  else if (document.getElementById('17').value === 'True') {return  "Hunter";} 
-  else if (document.getElementById('18').value === 'True') {return  "Scorpian";} 
-  else if (document.getElementById('19').value === 'True') {return  "Star";} 
-  else if (document.getElementById('20').value === 'True') {return  "Metal";} 
-  else if (document.getElementById('21').value === 'True') {return  "Echo";} 
-  else if (document.getElementById('22').value === 'True') {return  "Night";}
+  if (document.getElementById('fourteen').value === 'true') {return  "Pheonix";} 
+  else if (document.getElementById('fifthteen').value === 'true') {return  "Shadow";} 
+  else if (document.getElementById('sixteen').value === 'true') {return  "Powers";} 
+  else if (document.getElementById('seventeen').value === 'true') {return  "Hunter";} 
+  else if (document.getElementById('eighteen').value === 'true') {return  "Scorpian";} 
+  else if (document.getElementById('nineteen').value === 'true') {return  "Star";} 
+  else if (document.getElementById('twenty').value === 'true') {return  "Metal";} 
+  else if (document.getElementById('twentyone').value === 'true') {return  "Echo";} 
+  else if (document.getElementById('twentytwo').value === 'true') {return  "Night";}
 
 }
 /* 
