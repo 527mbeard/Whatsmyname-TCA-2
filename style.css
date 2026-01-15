@@ -6,7 +6,6 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    margin: 0;
     overflow-x: hidden;
     margin-top:50px;
     margin-bottom:50px;
@@ -15,8 +14,8 @@ body {
 .card {
     background: linear-gradient(180deg, #1B1B1B 0%, #0D0D0D 100%);
     border-radius: 20px;
-    padding: 35px 30px;
-    width: 450px;
+    padding: 35px 35px;
+    width: 100%;
     border: 2px solid #ff1a1a;
     box-shadow: 0 0 30px rgb(255, 0, 0), 0 10px 25px rgb(255, 0, 0);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -54,14 +53,41 @@ input[type="text"], select, input[type="date"] {
     transition: all 0.3s ease;
 }
 
+input[type="text"]::placeholder {
+    color: #ff3333;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
+
+}
+
+.placeholder{
+    color:pink;
+}
 input[type="text"]:focus, select:focus, input[type="date"]:focus {
     border-color: #ff3333;
     box-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
     outline: none;
 }
 
-label,li{
+.instructions{
+    background-image:url(blood.jpg);
     color:white;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.741);
+}
+.backer{
+    background-image:url(blood.jpg);
+}
+label{
+    color:white;
+}
+
+ul {
+    padding-left: 0;
+    list-style-position: inside;
+}
+
+li {
+    margin: 0;
+    padding: 0;
 }
 
 button, .btn {
@@ -157,4 +183,5 @@ select {
     background-position: right 10px center;
     background-size: 12px;
 }
+
 
