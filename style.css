@@ -162,7 +162,7 @@ input[type="checkbox"]:hover, input[type="radio"]:hover {
 }
 
 input[type="date"]::-webkit-calendar-picker-indicator {
-    filter: invert(1);
+    color:black;
     cursor: pointer;
 }
 
@@ -178,7 +178,7 @@ select {
     -moz-appearance: none; 
     appearance: none; 
     cursor: pointer;
-    background-image: url('data:image/svg+xml;utf8,<svg fill="white" height="16" width="16" xmlns="http://www.w3.org/2000/svg"><polygon points="0,0 16,0 8,8"/></svg>');
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23ff1a1a" height="16" width="16" xmlns="http://www.w3.org/2000/svg"><polygon points="0,0 16,0 8,8"/></svg>');
     background-repeat: no-repeat;
     background-position: right 10px center;
     background-size: 12px;
