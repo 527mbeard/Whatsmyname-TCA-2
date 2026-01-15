@@ -1,116 +1,99 @@
 function generateName() {
- 
-  // getMiddlename()
-  let actor = document.getElementById("lastName").value 
-  // getLastname()
-  // let month = document.getElementById("suffix").value 
-  // getSuffix()
 
-  const NewName = `${getPrefix()} + ${getFirstName()} + ${getMiddlename()} + ${getLastname()} + `
-  document.getElementById('result').innerText = NewName
+    const movie = document.querySelector("input[name='movie']:checked");
+    const letter = document.querySelector("input[name='letter']:checked");
+    const color = document.getElementById("color").value.trim();
+    const actor = document.getElementById("actor").value;
+    const birth = document.getElementById("birth").value;
 
-  // 1. Access the input element using its ID
-const dateInput = document.getElementById('birthday');
+    if (!movie) { alert("Error. Please click an option."); return; }
+    if (!letter) { alert("Error. Please enter the first letter."); return; }
+    if (color === "") { alert("Error. Please enter a color."); return; }
+    if (actor === "") { alert("Error. Please click an option."); return; }
+    if (birth === "") { alert("Error. Please click an option."); return; }
 
-// 2. Get the value of the input
-const selectedDateString = dateInput.value;
+    const newname = `${getPrefix(movie.value)} ${getFirstName(letter.value)} ${getMiddleName(color)} ${getLastName(actor)} ${getSuffix(birth)}`;
+    document.getElementById("result").innerText = "Your spy name is: " + newname;
 
-// Log the result to the console
-console.log(selectedDateString); 
-};
+    let selected = document.querySelector(".single-check:checked");
 
+    if ((movie.value === "fast" && letter.id === "one" && actor === "jason" )) {alert("You have chosen the JACKPOT choice!!! Yay ur special!");}
 
-function getPrefix() {
-  if (document.getElementById('one').value === 'true') {return  "Agent";} 
-  else if (document.getElementById('two').value === 'true') {return  "Sergeant";} 
-  else if (document.getElementById('three').value === 'true') {return  "Captain";} 
-  else if (document.getElementById('four').value === 'true') {return  "Officer";} 
-  else if (document.getElementById('five').value === 'true') {return  "General";} 
-  else if (document.getElementById('six').value === 'true') {return  "Private";} 
-  else if (document.getElementById('seven').value === 'true') {return  "Commander";} 
-  else if (document.getElementById('eight').value === 'true') {return  "Major";}
- 
 }
+
+const checkboxes = document.querySelectorAll(".single-check");
+
+checkboxes.forEach(box => {
+    box.addEventListener("change", () => {
+        checkboxes.forEach(other => {
+            if (other !== box) {
+                other.checked = false;
+            }
+        });
+    });
+});
+
+function getPrefix(movie) {
+    if (movie === "grey") return "Agent";
+    else if (movie === "bee") return "Sergeant";
+    else if (movie === "fast") return "Captain";
+    else if (movie === "gorge") return "Officer";
+    else if (movie === "run") return "General";
+    else if (movie === "amateur") return "Private";
+    else if (movie === "state") return "Commander";
+    else if (movie === "ghost") return "Major";
+}
+
 function getFirstName() {
-  if (document.getElementById('nine').value === 'true'){ return  "Archer";} 
-  else if (document.getElementById('ten').value === 'true') {return  "falcon";} 
-  else if (document.getElementById('eleven').value === 'true') {return  "jones";} 
-  else if (document.getElementById('twelve').value === 'true') {return  "orlando";} 
-  else if (document.getElementById('thirteen').value === 'true') {return  "sky";}
- 
+    if (document.getElementById('one').value === 'true') { return "Archer"; }
+    else if (document.getElementById('two').value === 'true') { return "falcon"; }
+    else if (document.getElementById('three').value === 'true') { return "jones"; }
+    else if (document.getElementById('four').value === 'true') { return "orlando"; }
+    else if (document.getElementById('five').value === 'true') { return "sky"; }
 }
 
-
-function getmiddleName() {
-   let color = document.getElementById("middleName").value.toLowerCase     
-  switch (color) {
-    case 'red': middleName = 'crazy'; break;
-    case 'orange': middleName = 'sneaky'; break;
-    case 'yellow': middleName = 'fast'; break;
-    case 'green': middleName = 'quiet'; break;
-    case 'blue': middleName = 'dark'; break;
-    case 'purple': middleName = 'mysterious'; break;
-    case 'pink': middleName = 'hidden'; break;
-    case 'black': middleName = 'secret'; break;
-    case 'brown': middleName = 'sinister'; break;
-  }
+function getMiddleName(color) {
+    color = color.toLowerCase().replace(/\s/g, "");
+    switch (color) {
+        case "red": return "Crazy";
+        case "orange": return "Sneaky";
+        case "yellow": return "Fast";
+        case "green": return "Quiet";
+        case "blue": return "Dark";
+        case "purple": return "Mysterious";
+        case "pink": return "Hidden";
+        case "black": return "Secret";
+        case "brown": return "Sinister";
+        default: return "ErrorColor";
+    }
 }
 
-
-// function getPoints(value){
-//     switch(value){
-//         case 'glen':
-//             return 1;
-//         case 'miles':
-//             return 1;
-//         case 'anya':
-//             return 1;
-//         case 'jason':
-//             return 1;
-//         case 'john':
-//             return 1;
-//         case 'chris':
-//             return 1;
-//         case 'ryan':
-//             return 1;
-//         case 'idris':
-//             return 1;
-//         case 'ana':
-//             return 1;
-//         default:
-//             return 0;
-//     }
-// }
-
-function getLastname() {
-  if (document.getElementById('fourteen').value === 'true') {return  "Pheonix";} 
-  else if (document.getElementById('fifthteen').value === 'true') {return  "Shadow";} 
-  else if (document.getElementById('sixteen').value === 'true') {return  "Powers";} 
-  else if (document.getElementById('seventeen').value === 'true') {return  "Hunter";} 
-  else if (document.getElementById('eighteen').value === 'true') {return  "Scorpian";} 
-  else if (document.getElementById('nineteen').value === 'true') {return  "Star";} 
-  else if (document.getElementById('twenty').value === 'true') {return  "Metal";} 
-  else if (document.getElementById('twentyone').value === 'true') {return  "Echo";} 
-  else if (document.getElementById('twentytwo').value === 'true') {return  "Night";}
-
-}
-/* 
-function getSuffix() {
-  if (document.getElementById('23)').value === 'True') {return  "Jr.";} 
-  else if (document.getElementById('24)').value === 'True') {return  "Sr.";} 
-  else if (document.getElementById('25)').value === 'True') {return "PhD";} 
-  else if (document.getElementById('26)').value === 'True') {return "MD";} 
-  else if (document.getElementById('27)').value === 'True') {return  "Jr.";} 
-  else if (document.getElementById('28)').value === 'True') {return  "Sr.";} 
-  else if (document.getElementById('29)').value === 'True') {return  "PhD";} 
-  else if (document.getElementById('30)').value === 'True') {return  "MD";} 
-  else if (document.getElementById('31)').value === 'True') {return  "Jr.";}
-  else if (document.getElementById('32)').value === 'True') {return  "Sr.";} 
-  else if (document.getElementById('33)').value === 'True') {return  "PhD";} 
-  else if (document.getElementById('34)').value === 'True') {return  "MD";}
+function getLastName(actor) {
+    if (actor === "glen") return "Phoenix";
+    else if (actor === "miles") return "Shadow";
+    else if (actor === "anya") return "Powers";
+    else if (actor === "jason") return "Hunter";
+    else if (actor === "john") return "Scorpion";
+    else if (actor === "chris") return "Star";
+    else if (actor === "ryan") return "Metal";
+    else if (actor === "idris") return "Echo";
+    else if (actor === "ana") return "Night";
 }
 
- 
- */
+function getSuffix(birth) {
+    const month = new Date(birth).getMonth() + 1;
 
+    if (month === 1) return "Jr.";
+    if (month === 2) return "Sr.";
+    if (month === 3) return "PhD";
+    if (month === 4) return "MD";
+    if (month === 5) return "Jr.";
+    if (month === 6) return "Sr.";
+    if (month === 7) return "PhD";
+    if (month === 8) return "MD";
+    if (month === 9) return "Jr.";
+    if (month === 10) return "Sr.";
+    if (month === 11) return "PhD";
+    if (month === 12) return "MD";
+}
 
